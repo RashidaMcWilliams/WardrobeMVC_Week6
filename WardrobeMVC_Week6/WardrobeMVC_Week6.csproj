@@ -167,10 +167,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\arsenal_hat.JPG" />
+    <Content Include="Content\arsenal_scarf.JPG" />
+    <Content Include="Content\arsenal_shoes.jpg" />
+    <Content Include="Content\away_scarf.JPG" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\emirates crest.jpg" />
+    <Content Include="Content\emirates_away.JPG" />
+    <Content Include="Content\emirates_home.JPG" />
+    <Content Include="Content\highbury.JPG" />
+    <Content Include="Content\invincibles.JPG" />
+    <Content Include="Content\nyc_supp_hoodie.JPG" />
+    <Content Include="Content\nyc_supp_tee.JPG" />
+    <Content Include="Content\old crest.png" />
+    <Content Include="Content\shorts.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
