@@ -19,8 +19,8 @@
                 <div class="caption">
                     <h3>@Html.DisplayFor(modelItem => item.TopsName)</h3>
                     <h4>@Html.DisplayFor(modelItem => item.TopsType)</h4>
-                    <p>@Html.DisplayFor(modelItem => item.TopsPhoto)</p>
-                    <p>>@Html.ActionLink("Details", "Details", new { id = item.TopsID }, new { @class = "btn btn-primary", role = "button" })</p>
+                    <p><img src="@Url.Content(item.TopsPhoto)" /></p>
+                    <p>@Html.ActionLink("Details", "Details", new { id = item.TopsID }, new { @class = "btn btn-primary", role = "button" })</p>
 
                 </div>
             </div>

@@ -4,9 +4,23 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Shorts And Such</h2>
 
-<div>
+<div class="cards container-fluid">
+    <div class="row">
+        <div class="col-xs-6">
+            <p class="detail-photo"><img src="@Url.Content(Model.BottomsPhoto)" /></p>
+            <h4>@Html.DisplayNameFor(model => model.BottomsName): @Html.DisplayFor(model => model.BottomsName)</h4>
+            <h4>@Html.DisplayNameFor(model => model.BottomsSeason): @Html.DisplayFor(model => model.BottomsSeason)</h4>
+            <p>@Html.DisplayNameFor(model => model.BottomsType): @Html.DisplayFor(model => model.BottomsType)</p>
+            <p>@Html.DisplayNameFor(model => model.BottomsColor): @Html.DisplayFor(model => model.BottomsColor)</p>
+            <p>@Html.DisplayNameFor(model => model.BottomsOccasion): @Html.DisplayFor(model => model.BottomsOccasion)</p>
+        </div>
+    </div>
+</div>
+
+
+@*<div>
     <h4>Bottom</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -63,4 +77,4 @@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.BottomsID }) |
     @Html.ActionLink("Back to List", "Index")
-</p>
+</p>*@

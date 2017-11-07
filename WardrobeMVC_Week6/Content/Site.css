@@ -83,11 +83,12 @@ a {
 
 #myCarousel {
     background-color: #FFFFFF;
-    height: 200px;
+    height: 350px;
     width: 800px;
     margin: 0px;
-    border: 0px;
-    padding-left: 225px;
+    border-top: 0px;
+    padding-top: 0px;
+    padding-left: 450px;
 }
 
 .carousel-inner>img {
@@ -99,7 +100,7 @@ a {
 ol.carousel-indicators {
     color: #D90000;
     padding-top: 150px;
-    padding-left: 30px;
+    padding-left: 75px;
 }
 
 .carousel-indicators li {
@@ -113,6 +114,10 @@ ol.carousel-indicators {
     position: absolute;
     z-index: 50;
     bottom: 0px;
+}
+
+.carousel-control {
+    color: #D90000;
 }
 
 .carousel-control.left {

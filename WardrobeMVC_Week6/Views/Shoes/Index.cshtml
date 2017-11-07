@@ -1,63 +1,82 @@
 ﻿@model IEnumerable<WardrobeMVC_Week6.Sho>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Shoes Index";
 }
 
-<h2>Index</h2>
+<h2>Trainers & Custom Kicks</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Careful Bruv", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesSeason)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesOccasion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesPhoto)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesSeason)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesOccasion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesPhoto)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ShoesID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ShoesID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ShoesID })
-        </td>
-    </tr>
-}
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
 
-</table>
+                <div class="caption">
+                    <h3>@Html.DisplayFor(modelItem => item.ShoesName)</h3>
+                    <h4>@Html.DisplayFor(modelItem => item.ShoesType)</h4>
+                    <p><img src="@Url.Content(item.ShoesPhoto)" /></p>
+                    <p>@Html.ActionLink("Details", "Details", new { id = item.ShoesID }, new { @class = "btn btn-primary", role = "button" })</p>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ShoesName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShoesType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShoesColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShoesSeason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShoesOccasion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShoesPhoto)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShoesName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShoesType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShoesColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShoesSeason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShoesOccasion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShoesPhoto)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ShoesID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ShoesID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ShoesID })
+            </td>
+        </tr>
+    }
+
+    </table>*@
